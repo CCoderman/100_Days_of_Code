@@ -9,8 +9,8 @@ def calculate_tip():
     percentage = float(input("What percentage tip would you like to give? "))
 
     # Math calculations to get the tip
-    percent_convert = percentage / 100
-    tip = ((bill / people) * percent_convert)
+    percent_convert = percentage / 100 + 1
+    tip = round((bill / people) * percent_convert, 2)
     print(tip)
 
 
