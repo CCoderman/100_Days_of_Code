@@ -6,12 +6,12 @@ def calculate_tip():
     print("Welcome to the tip calculator")
     bill = float(input("What was the total bill? $"))
     people = float(input("How many people will split the bill? "))
-    percentage = float(input("What percentage tip would you like to give? "))
+    percentage = float(input("What percentage tip would you like to give? eg. 15, 20, etc. "))
 
     # Math calculations to get the tip
     percent_convert = percentage / 100 + 1
     tip = round((bill / people) * percent_convert, 2)
-    print(tip)
+    print(f"Each person should pay: ${tip}")
 
 
 calculate_tip()
