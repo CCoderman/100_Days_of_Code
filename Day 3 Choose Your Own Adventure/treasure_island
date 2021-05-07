@@ -1,0 +1,107 @@
+# Day 3 of 100 Days of Code
+# Treasure Island: A choose your own adventure game
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+# Check to see if user wants to play the game
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+start = input("Are you brave enough for the challenge? (y/n): ")
+start_lowercase = start.lower()
+if start_lowercase == 'n' or start_lowercase == 'no':
+    print("Game over!")
+    exit()
+else:
+    pass
+
+# Part 1: first split path, left continues the game, right will end game and prompt to try again
+print("----------------------------------------------------------------------------")
+print("You leave your boat and wander into the dense jungle.")
+print("Eventually, you reach a split in the path, one going left and one right.")
+print("The path on the left is through dense jungle,")
+print("The path on the right is clear and you can see a house in the distance.")
+right_or_left = input("Which path do you take? Right or left? (r/l): ")
+r_l_lowercase = right_or_left.lower()
+if r_l_lowercase == "right" or r_l_lowercase == 'r':
+    print("You follow the right path...")
+    print("You come across a pile of leaves, which turns out to be a trap!")
+    print("You fall into the pit, Game over!")
+    exit()
+else:
+    print("Despite the impending doom you feel from the dark jungle, you take the left path...")
+
+# Part 2: Swim or wait. Swimming or any other option will result in game end
+print("----------------------------------------------------------------------------")
+print("The jungle is ominous and frightening, but you pass through safely.")
+print("You exit the jungle and come across a raging river.")
+print("In the river, you see fins sticking out of the surface")
+print("You hear the growl and see the shadow of a large creature coming from the forest!")
+swim_or_wait = input("Do you swim across the river, or find a place to hide and wait? (s/w): ")
+s_w_lowercase = swim_or_wait.lower()
+if s_w_lowercase == "s" or s_w_lowercase == "swim":
+    print("You decide to swim across the river...")
+    print("and are eaten by sharks, crocodiles, and piranhas, oh my.")
+    print("Game over!")
+    exit()
+else:
+    print("You decide to hide in a bush...")
+    print("The creature loses interest and leaves, and the creatures in the water disperse.")
+    print("You find rocks that can be stepped on and make it to the other side.")
+
+# Part 3: Colored doors. anything except yellow is game over
+print("----------------------------------------------------------------------------")
+print("After wandering for a while, you come across a set of colored doors:")
+print("One red, one blue, and one yellow.")
+print("The red door radiates a burning aura.")
+print("You hear a loud snarl emanating from the blue door.")
+print("The yellow door is glowing a blinding light.")
+door_selection = input("What door do you want to open? (r/b/y): ")
+door = door_selection.lower()
+if door == "r" or door == "red":
+    print("You go through the red door...")
+    print("Inside there is burning lava that engulfs you!")
+    print("Game over!")
+    exit()
+elif door == "b" or door == "blue":
+    print("You go through the blue door...")
+    print("Inside there is a enormous beast that swallows you in one bite!")
+    print("Game over!")
+    exit()
+else:
+    print("You go through the yellow door...")
+    print("Inside there are piles of gold and jewels with a treasure chest!")
+    print("You open the treasure and find...")
+    print("Nothing! Maybe the real treasure was the friends you made along the way.")
+    print("Congratulations, you made it to the treasure!")
+    exit()
+
+
+# valid_answer = False
+# while not valid_answer:
+#     answer = input("Try again? (y/n)")
+#     answer_lowercase = answer.lower()
+#     if answer_lowercase == "y" or answer_lowercase == "n":
+#         valid_answer = True
+#         if answer_lowercase == "y":
+#             # restart program?
+#         else:
+#             exit()
